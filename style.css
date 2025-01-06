@@ -1,0 +1,184 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(45deg, #ff6f61, #ffb499);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Header and Title */
+h1 {
+  font-size: 3.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Dashboard Container */
+#dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Difficulty Select */
+#difficultySelectWrapper {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 50px;
+}
+
+#difficultySelect {
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  background-color: #2a2a2a;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#difficultySelect:hover {
+  background-color: #ff6f61;
+  transform: scale(1.05);
+}
+
+/* Level Buttons */
+.level-btn {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  margin: 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 8px;
+  width: 220px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+}
+
+.level-btn:hover {
+  background-color: #f78e76;
+  transform: scale(1.05);
+}
+
+.level-btn:active {
+  transform: scale(0.98);
+}
+
+/* Return Button */
+#returnButton {
+  display: none;
+  background-color: #ff9e00;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-radius: 8px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 10;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#returnButton:hover {
+  background-color: #ff5722;
+  transform: scale(1.05);
+}
+
+#returnButton:active {
+  transform: scale(0.98);
+}
+
+/* Canvas Style */
+#gameCanvas {
+  display: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, #ff6f61, #ffb499);
+  border: 3px solid #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #dashboard {
+    padding: 30px 50px;
+    width: 85%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .level-btn {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 12px 30px;
+  }
+
+  #difficultySelect {
+    font-size: 1.1rem;
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  #dashboard {
+    padding: 20px 30px;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .level-btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  #difficultySelect {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  #returnButton {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}

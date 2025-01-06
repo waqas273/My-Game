@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brick Breaker Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="dashboard">
+    <h1>Brick Breaker</h1>
+    <p>Select a level to start:</p>
+    <button class="level-btn" data-level="1">Level 1</button>
+    <button class="level-btn" data-level="2">Level 2</button>
+    <button class="level-btn" data-level="3">Level 3</button>
+    <button class="level-btn" data-level="4">Level 4</button>
+    <button class="level-btn" data-level="5">Level 5</button>
+    <button class="level-btn" data-level="6">Level 6</button>
+    <button class="level-btn" data-level="7">Level 7</button>
+    <button class="level-btn" data-level="8">Level 8</button>
+    <button class="level-btn" data-level="9">Level 9</button>
+    <button class="level-btn" data-level="10">Level 10</button>
+  </div>
+
+    <div id="difficultySelectWrapper">
+      <select id="difficultySelect">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+    </div>
+
+
+  <canvas id="gameCanvas"></canvas>
+  <button id="returnButton">Return to Dashboard</button>
+  <script src="script.js"></script>
+</body>
+</html>
